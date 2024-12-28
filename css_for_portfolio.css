@@ -1,0 +1,104 @@
+.box {
+
+
+    width: 100vw;
+    height: 25vh;
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+}
+
+header {
+    background-image: url(https://i.pinimg.com/originals/43/13/66/43136636f16bf94193ea96b6a9a8d25b.png);
+    padding-bottom: 30px;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 80vw;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.img {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    padding-top: 10px;
+    float: left;
+    margin: 10px;
+}
+
+.name {
+    text-align: center;
+    color: azure;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav {
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+.nav a:hover{
+    background-color: burlywood;
+}
+
+
+
+.pro-nav{
+    
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+}
+.pro-nav li{
+    display: inline;
+    padding: 10px;
+}
+.pro-nav a{
+    display: inline-block;
+    padding: 5px;
+    padding: 10px;
+
+}
+.pro-nav a:hover{
+    background-color: burlywood;
+}
+
+.help-sec{
+    display: inline-block;
+}
+.help-type{
+    max-width: 250px;
+    display:block;
+}
+.help-image {
+    width: 250px;
+}
+
+.help-title{
+     display: block; 
+    width: 40%;
+      text-align: center;  
+     font-weight: bolder;
+     font-size: 1.5em;
+     margin-bottom: 15px;
+   
+}

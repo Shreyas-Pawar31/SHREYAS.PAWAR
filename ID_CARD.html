@@ -3,15 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive ID Card</title>
     <link href='https://fonts.googleapis.com/css?family=Libre Barcode 39' rel='stylesheet'>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .myimg {
-            float: left;
             margin: 15px;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
         }
@@ -19,99 +23,116 @@
         .idcard {
             display: flex;
             justify-content: center;
-
-
-
-            height: 50vh;
             text-align: left;
-            line-height: 2;
-
-
+            line-height: 1.5;
         }
 
         .zeal {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 200px;
-        }
-
-        .zeal img {
-            width: auto;
             height: 150px;
         }
 
-        .border {
-            border:solid 2px;
-            margin-left: 400px;
-            margin-right: 500px;
-            border-radius: 30px;
-           
-            
+        .zeal img {
+            max-width: 100%;
+            height: auto;
         }
 
-
+        .border {
+            border: solid 2px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 30px;
+            max-width: 800px;
+        }
 
         #Barcode {
-
             font-family: 'Libre Barcode 39';
             font-size: 22px;
-
-
-
         }
 
-        .col{
+        .col {
             writing-mode: vertical-lr;
             text-align: center;
-            margin-right: 30px;
-            font-size: 50px;
-            position: absolute;
-           height: 548.5px;
-          background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px 0px 0px 30px;
+            padding: 10px;
+            font-size: 24px;
+            background-color: aqua;
+            border-radius: 30px 0 0 30px;
         }
-        .right{
-            margin-left: 50px;
+
+        .right {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        @media (max-width: 768px) {
+            .border {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .myimg {
+                width: 100px;
+                height: 100px;
+            }
+
+            .col {
+                font-size: 18px;
+                height: auto;
+                border-radius: 15px 15px 0 0;
+                writing-mode: horizontal-tb;
+            }
+
+            .idcard {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                width: auto;
+            }
+
+            .zeal {
+                height: auto;
+            }
+
+            .zeal img {
+                height: 100px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="border">
-
-        <div class="col">ENGNEERING</div>
+        <div class="col">ENGINEERING</div>
         <div class="right">
-        <div class="zeal">
-            <img src="ZealInstitute.png">
-        </div>
-
-        <div class="idcard">
-
-
-            <table>
-                <tr>
-                    <td> <img srcset="shreyas_img.jpg" class="myimg"></td>
-
-                    <td> <b>NAME : SHREYAS GAJANAN PAWAR</b><br>
-                        <b>DEPT : Btech INFORMATION TECHNOLOGY</b><br>
-                        <b>ADMISSION DATE : 08-09-2024</b><br>
-                        <b id="Barcode"> SHREYAS</b>
-                    </td>
-
-
-                </tr>
-            </table>
-
-
-
+            <div class="zeal">
+                <img src="ZealInstitute.png" alt="Zeal Institute Logo">
+            </div>
+            <div class="idcard">
+                <table>
+                    <tr>
+                        <td><img src="shreyas_img.jpg" class="myimg" alt="Shreyas Pawar"></td>
+                        <td>
+                            <b>NAME: SHREYAS GAJANAN PAWAR</b><br>
+                            <b>DEPT: BTech INFORMATION TECHNOLOGY</b><br>
+                            <b>ADMISSION DATE: 08-09-2024</b><br>
+                            <b id="Barcode">SHREYAS</b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-    </div>
-
 </body>
 
 </html>
